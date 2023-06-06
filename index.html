@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            direction: rtl;
+            font-size: 20px;
+            color: black;
+        }
+
+        body {}
+
+        nav {
+            width: 100%;
+            height: 25px;
+        }
+
+        .class-nav {
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            width: 100px;
+            display: inline-block;
+            float: right;
+        }
+
+        .class-nav:hover {
+            background-color: #6e6e6e49;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+        }
+
+        #logo {
+            height: 100px;
+            object-fit: contain;
+            background-color: transparent;
+        }
+
+        #text_logo {
+            display: inline-block;
+            height: 100px;
+            font-size: 60px;
+            line-height: 100px;
+            color: #000000;
+            padding: 0px 20px;
+            position: absolute;
+            top: auto;
+        }
+
+        main {
+            margin: 5px 0px 0px 0px;
+            height: 500px;
+        }
+
+        aside {
+            width: calc(5%);
+            height: 500px;
+            float: right;
+            box-shadow: -4px 10px 9px 0px #76afaf;
+            transition: 0.5s width 0s;
+            border-top-left-radius: 15px;
+            overflow: hidden;
+        }
+
+        article {
+            width: calc(95% - 10px);
+            height: 500px;
+            float: left;
+            display: inline-block;
+            padding: 0px 10px 0px 0px;
+            transition: 0.5s width 0s;
+            overflow: overlay;
+        }
+
+        .logo_img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .setting_div {
+            width: calc(100% - 5px);
+            height: 40px;
+            padding: 0px 5px 0px 0px;
+            margin: 10px 0px 0px 0px;
+            overflow: visible;
+        }
+
+        .setting_div:hover {
+            background-color: #6e6e6e49;
+        }
+
+        .setting_span {
+            display: none;
+            line-height: 40px;
+            height: 40px;
+            position: absolute;
+            top: auto;
+            padding: 0px 14px;
+        }
+
+        #open,
+        #open2 {
+            border: 0px solid darkcyan;
+            border-radius: 12px 12px 0px 0px;
+            height: 30px;
+            margin: 5px 5px 0px 20px;
+            background: cadetblue;
+            overflow: hidden;
+            border: 1px solid darkcyan;
+        }
+
+        img {
+            height: calc(100% - 4px);
+            margin: 2px 0px;
+        }
+
+        .a1:hover {
+            background-color: #6e6e6e49;
+        }
+
+        #alnateja_codes,
+        #textarea_codes {
+            border-radius: 0px 0px 12px 12px;
+            margin: 0px 5px 5px 20px;
+            height: 488px;
+            max-height: 488px;
+            min-height: 488px;
+            outline: 0px;
+            border: 1px solid darkcyan;
+            border-top: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        #alnateja_codes {
+            background-color: white;
+            border-bottom-left-radius: 0px;
+        }
+
+        #alnateja_codes,
+        #open,
+        #open2 {
+            padding: 0px;
+            width: calc(100% - 27px);
+            direction: ltr;
+        }
+
+        #textarea_codes {
+            width: calc(100% - 57px);
+            max-width: calc(100% - 57px);
+            min-width: calc(100% - 57px);
+            height: 488px;
+            max-height: 488px;
+            min-height: 488px;
+            margin: 0px 5px 5px 20px;
+            outline: 0px;
+            padding: 0px 10px 0px 20px;
+            direction: ltr;
+        }
+
+        #alnateja {
+            width: 100%;
+            height: 20px;
+            margin: 5px 0px;
+            text-align: center;
+        }
+
+        .a1 {
+            width: calc(60px);
+            height: 30px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            margin: 0px;
+            float: right;
+        }
+
+        #HTML {
+            background-color: coral;
+        }
+
+        #CSS {
+            background-color: aqua;
+        }
+
+        #JS {
+            background-color: gold;
+        }
+
+        #HTML:hover {
+            background-color: rgb(247, 100, 47);
+        }
+
+        #CSS:hover {
+            background-color: rgb(19, 226, 226);
+        }
+
+        #JS:hover {
+            background-color: rgb(241, 214, 58);
+        }
+
+        audio {
+            display: none;
+        }
+
+        .color_this_wib1 {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            margin: 10px 0px;
+        }
+
+        .color_this_wib {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            margin: 5px;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #orange {
+            background-color: orange;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #aqua {
+            background-color: aqua;
+        }
+
+        #red:hover {
+            background-color: rgb(207, 0, 0);
+        }
+
+        #green:hover {
+            background-color: rgb(0, 88, 0);
+        }
+
+        #orange:hover {
+            background-color: rgb(192, 126, 3);
+        }
+
+        #blue:hover {
+            background-color: rgb(0, 0, 202);
+        }
+
+        #yellow:hover {
+            background-color: rgb(175, 175, 0);
+        }
+
+        #aqua:hover {
+            background-color: rgb(0, 201, 201);
+        }
+
+        #white {
+            background-color: rgb(211, 211, 211);
+        }
+
+        #white:hover {
+            background-color: rgb(167, 167, 167);
+        }
+
+        #color_this_wib1 {
+            width: calc(100% - 20px);
+            height: 40px;
+            direction: ltr;
+            margin: 10px 10px;
+            line-height: 40px;
+        }
+
+        #color_this_wib2 {
+            width: calc(100% - 20px);
+            height: 30px;
+            direction: ltr;
+            margin: 10px;
+            line-height: 30px;
+        }
+
+        #color_this_wib3 {
+            width: calc(100% - 20px);
+            height: 30px;
+            direction: ltr;
+            margin: 10px;
+            line-height: 30px;
+        }
+
+        #audios {
+            width: 300px;
+            margin: 10px;
+            height: 30px;
+        }
+
+        #delete_all_data,
+        #deletee {
+            display: inline-block;
+            width: calc(50% - 20px);
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 10px;
+            background-color: #ff5b5b;
+            float: left;
+            border-radius: 10px;
+        }
+
+        input,
+        button,
+        select {
+            border: 0.5px solid rgba(0, 0, 0, 0.411);
+            border-radius: 10px;
+            outline: 0px;
+        }
+
+        .help_masseges {
+            background-color: bisque;
+            width: 100%;
+            height: 100px;
+            padding: 2px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="class-nav" id="lange"></div>
+        <div class="class-nav" id="who_are_we"></div>
+        <div class="class-nav" id="around"></div>
+    </nav>
+    <header>
+        <img src="img/logo.png" alt="" id="logo">
+        <p id="text_logo"></p>
+    </header>
+    <main>
+        <aside id="aside">
+            <div class="setting_div" id="logo_refes">
+                <img class="logo_img" src="img/logo_refes.png" alt="">
+                <span class="setting_span" id="logo_refes1"></span>
+            </div>
+            <div class="setting_div" id="video_logo">
+                <img class="logo_img" src="img/video_logo.png" alt="">
+                <span class="setting_span" id="video_logo1"></span>
+            </div>
+            <div class="setting_div" id="code_logo">
+                <img class="logo_img" src="img/code_logo.png" alt="">
+                <span class="setting_span" id="code_logo1"></span>
+            </div>
+            <div class="setting_div" id="setting_logo">
+                <img class="logo_img" src="img/setting_logo.png" alt="">
+                <span class="setting_span" id="setting_logo1"></span>
+            </div>
+        </aside>
+        <article id="article">
+
+        </article>
+    </main>
+    <audio id="aoduo" src="" controls></audio>
+    <audio id="audio_error" src="audio/error-warning-login-denied-132113.mp3"></audio>
+    <script>
+        var langes;
+        let langes1 = sessionStorage.getItem("langes")
+        if (langes1 == "English") {
+            langes = "عربي";
+        } else if (langes1 == "عربي") {
+            langes = "English";
+        } else {
+            langes = "English";
+        }
+        var lange = document.getElementById("lange");
+        var who_are_we = document.getElementById("who_are_we");
+        var around = document.getElementById("around");
+        var logo = document.getElementById("logo");
+        var text_logo = document.getElementById("text_logo");
+        var aside = document.getElementById("aside");
+        var article = document.getElementById("article");
+        var setting_span = document.querySelectorAll(".setting_span");
+        var logo_refes1 = document.getElementById("logo_refes1");
+        var video_logo1 = document.getElementById("video_logo1");
+        var code_logo1 = document.getElementById("code_logo1");
+        var setting_logo1 = document.getElementById("setting_logo1");
+        var setting_div = document.querySelectorAll(".setting_div");
+        var logo_img = document.querySelectorAll(".logo_img");
+        var setting_span = document.querySelectorAll(".setting_span");
+        var video_logo = document.getElementById("video_logo");
+        var code_logo = document.getElementById("code_logo");
+        var setting_logo = document.getElementById("setting_logo");
+        var logo_refes = document.getElementById("logo_refes");
+        var aoduo = document.getElementById("aoduo");
+        var header = document.querySelector("header");
+        var nav = document.querySelector("nav");
+        if (sessionStorage.getItem("color") == "red") {
+            red1();
+        } else if (sessionStorage.getItem("color") == "orange") {
+            orange1();
+        } else if (sessionStorage.getItem("color") == "green") {
+            green1();
+        } else if (sessionStorage.getItem("color") == "blue") {
+            blue1();
+        } else if (sessionStorage.getItem("color") == "aqua") {
+            aqua1();
+        } else if (sessionStorage.getItem("color") == "yellow") {
+            yellow1();
+        } else if (sessionStorage.getItem("color") == "white") {
+            white1();
+        } else if (sessionStorage.getItem("color") == null) {
+            white1();
+        }
+        if (sessionStorage.getItem("audio") == null) {
+            audios2("c-click");
+        } else if (sessionStorage.getItem("audio") !== null) {
+            audios2(sessionStorage.getItem("audio"));
+        }
+        language();
+        function language_English() {
+            document.body.style.direction = "ltr";
+            lange.innerHTML = "عربي";
+            lange.style.float = "left";
+            who_are_we.innerHTML = "who are we";
+            who_are_we.style.float = "left";
+            around.innerHTML = "around us";
+            around.style.float = "left";
+            langes = "English";
+            text_logo.innerHTML = "Arabic Programmer";
+            text_logo.style.float = "left";
+            text_logo.style.left = "100px";
+            logo.style.float = "left";
+            article.style.float = "left";
+            aside.style.float = "left";
+            aside.style.boxShadow = "6px 4px 9px 0px #76afaf";
+            article.style.padding = "0px 0px 0px 10px";
+            logo_refes1.innerHTML = "Tutorials";
+            video_logo1.innerHTML = "Recorded Video";
+            setting_logo1.innerHTML = "Setting";
+            code_logo1.innerHTML = "Code Editor";
+            article.style.direction = "ltr";
+            for (let a = 0; a < setting_div.length; a++) {
+                setting_div[a].style.padding = "0px 0px 0px 5px";
+            }
+            for (let l = 0; l < setting_span.length; l++) {
+                setting_span[l].style.left = "40px"
+            }
+            for (let m = 0; m < logo_img.length; m++) {
+                logo_img[m].style.float = "left";
+            }
+            sessionStorage.setItem("langes", langes);
+            aside.style.borderTopLeftRadius = "0px";
+            aside.style.borderTopRightRadius = "15px";
+        }
+        function language_Arabic() {
+            document.body.style.direction = "ltr";
+            lange.innerHTML = "English";
+            lange.style.float = "right";
+            who_are_we.innerHTML = "من نحن";
+            who_are_we.style.float = "right";
+            around.innerHTML = "حولنا";
+            around.style.float = "right";
+            langes = "عربي";
+            text_logo.innerHTML = "المبرمج العربي";
+            text_logo.style.float = "right";
+            logo.style.float = "right";
+            text_logo.style.left = "auto";
+            article.style.float = "right";
+            aside.style.float = "right";
+            aside.style.boxShadow = "-4px 10px 9px 0px #76afaf";
+            article.style.padding = "0px 10px 0px 0px";
+            article.style.direction = "rtl";
+            logo_refes1.innerHTML = "الدروس";
+            video_logo1.innerHTML = "الفديوهات المسجلة";
+            setting_logo1.innerHTML = "الأعدادات";
+            code_logo1.innerHTML = "محرر أكواد";
+            for (let a = 0; a < setting_div.length; a++) {
+                setting_div[a].style.padding = "0px 5px 0px 0px";
+            }
+            for (let l = 0; l < setting_span.length; l++) {
+                setting_span[l].style.left = "auto";
+            }
+            for (let m = 0; m < logo_img.length; m++) {
+                logo_img[m].style.float = "right";
+            }
+            sessionStorage.setItem("langes", langes);
+            aside.style.borderTopLeftRadius = "15px";
+            aside.style.borderTopRightRadius = "0px";
+        }
+        function language() {
+            if (langes == "English") {
+                language_Arabic();
+            }
+            else if (langes == "عربي") {
+                language_English();
+            }
+        }
+        document.getElementById("lange").onclick = () => {
+            aoduo.load();;
+            aoduo.play();
+            language();
+        }
+        aside.onmouseover = () => {
+            aside.style.width = "20%";
+            article.style.width = "calc(80% - 10px)";
+            for (let i = 0; i < setting_span.length; i++) {
+                setting_span[i].style.display = "inline-block";
+            }
+        }
+        aside.onmouseout = () => {
+            for (let b = 0; b < setting_span.length; b++) {
+                setting_span[b].style.display = "none";
+            }
+            aside.style.width = "5%";
+            article.style.width = "calc(95% - 10px)";
+        }
+        rumove();
+        logo_refes.onclick = () => {
+            aoduo.load();;
+            aoduo.play()
+            F_logo_refes();
+        }
+        video_logo.onclick = () => {
+            aoduo.load();;
+            aoduo.play()
+            F_video_logo();
+        }
+        code_logo.onclick = () => {
+            aoduo.load();;
+            aoduo.play()
+            F_code_logo();
+        }
+        setting_logo.onclick = () => {
+            aoduo.load();;
+            aoduo.play()
+            F_setting_logo();
+        }
+        function F_logo_refes() {
+            sessionStorage.setItem("F_set", "F_logo_refes");
+            if (langes == "English") {
+
+            }
+            else if (langes == "عربي") {
+
+            }
+        }
+        function F_video_logo() {
+            sessionStorage.setItem("F_set", "F_video_logo");
+            if (langes == "English") {
+
+            }
+            else if (langes == "عربي") {
+
+            }
+        }
+        function F_code_logo() {
+            sessionStorage.setItem("F_set", "F_code_logo");
+            article.innerHTML = `   
+    <div class="help_masseges">
+    <p>dhjgkhlj;k'l</p>
+    <ul>
+    <li>asghjklsdhkh</li>
+    </ul>
+    </div> 
+    <div id="open2">
+    <div class="a1" id="HTML">HTML</div>
+    <div class="a1" id="CSS">CSS</div>    
+    <div class="a1" id="JS">JS</div>
+    <div class="a1" id="delete"><img src="img/delete.png"/></div>
+    <div class="a1" id="preserve"><img src="img/images-removebg-preview.png"></div>
+    </div>
+    <textarea id="textarea_codes"></textarea>
+    <p id="alnateja">النتيجة</p>
+    <hr>
+    <div id="open"></div>
+    <iframe id="alnateja_codes"></iframe>
+    `;
+            var a1 = document.querySelectorAll(".a1");
+            var open2 = document.getElementById("open2");
+            var open = document.getElementById("open");
+            var HTML = document.getElementById("HTML");
+            var CSS = document.getElementById("CSS");
+            var JS = document.getElementById("JS");
+            var delet = document.getElementById("delete");
+            var preserve = document.getElementById("preserve");
+            var alnateja = document.getElementById("alnateja");
+            var alnateja_codes = document.getElementById("alnateja_codes");
+            var textarea_codes = document.getElementById("textarea_codes");
+            language_code_logo()
+            function language_code_logo() {
+                if (langes == "English") {
+                    alnateja.innerHTML = "Resutl";
+                    textarea_codes.style.margin = "0px 20px 5px 5px";
+                    alnateja_codes.style.margin = "0px 20px 5px 5px";
+                    open.style.margin = "5px 20px 0px 5px";
+                    open2.style.margin = "5px 20px 0px 5px";
+                    for (let b = 0; b < a1.length; b++) {
+                        a1[b].style.float = "left";
+                    }
+                }
+                else if (langes == "عربي") {
+                    alnateja.innerHTML = "النتيجة";
+                    textarea_codes.style.margin = "0px 5px 5px 20px";
+                    alnateja_codes.style.margin = "0px 5px 5px 20px";
+                    open.style.margin = "5px 5px 0px 20px";
+                    open2.style.margin = "5px 5px 0px 20px";
+                    for (let b = 0; b < a1.length; b++) {
+                        a1[b].style.float = "right";
+                    }
+                }
+            }
+            var HTML2 = localStorage.getItem("HTML2");
+            HTML1();
+            function HTML1() {
+                if (HTML2 == null || HTML2 == undefined || HTML2 == "") {
+                    textarea_codes.value = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>    
+<body>
+</body>
+</html>`;
+                    localStorage.setItem("HTML2", HTML2);
+                } else {
+                    textarea_codes.value = HTML2;
+                }
+                open2.style.borderColor = "coral";
+                open2.style.background = "coral";
+                textarea_codes.style.borderColor = "coral";
+                textarea_codes.focus();
+                delet.onclick = () => {
+                    aoduo.load();
+                    aoduo.play()
+                    textarea_codes.value = "";
+                    HTML2 = textarea_codes.value;
+                    localStorage.setItem("HTML2", HTML2);
+                    preserv1();
+                }
+                textarea_codes.oninput = () => {
+                    HTML2 = textarea_codes.value;
+                    localStorage.setItem("HTML2", HTML2);
+                    preserv1();
+                }
+            }
+            HTML2 = localStorage.getItem("HTML2");
+            var CSS2 = localStorage.getItem("CSS2");
+            function CSS1() {
+                open2.style.borderColor = "cyan";
+                open2.style.background = "cyan";
+                textarea_codes.style.borderColor = "cyan";
+                textarea_codes.value = CSS2;
+                textarea_codes.focus();
+                delet.onclick = () => {
+                    aoduo.load();;
+                    aoduo.play()
+                    textarea_codes.value = "";
+                    CSS2 = textarea_codes.value;
+                    localStorage.setItem("CSS2", CSS2);
+                    preserv1();
+                }
+                textarea_codes.oninput = () => {
+                    CSS2 = textarea_codes.value;
+                    localStorage.setItem("CSS2", CSS2);
+                    preserv1();
+                }
+            }
+            CSS2 = localStorage.getItem("CSS2");
+            var JS2 = localStorage.getItem("JS2");
+            function JS1() {
+                open2.style.borderColor = "gold";
+                open2.style.background = "gold";
+                textarea_codes.style.borderColor = "gold";
+                textarea_codes.value = JS2;
+                textarea_codes.focus();
+                delet.onclick = () => {
+                    aoduo.load();;
+                    aoduo.play()
+                    textarea_codes.value = "";
+                    JS2 = textarea_codes.value;
+                    localStorage.setItem("JS2", JS2);
+                    preserv1();
+                }
+                textarea_codes.oninput = () => {
+                    JS2 = textarea_codes.value;
+                    localStorage.setItem("JS2", JS2);
+                    preserv1();
+                }
+            }
+            JS2 = localStorage.getItem("JS2");
+            function preserv1() { }
+            function runcodes() {
+                let a1 = HTML2.indexOf("<head");
+                let a2 = HTML2.substring(a1 + 5);
+                let a3 = a2.indexOf(">");
+                let a4 = a2.substring(a3 + 1);
+                let a5 = a4.indexOf("</head");
+                a2 = a2.substring(1, a5)
+                let myIframeDocument = alnateja_codes.contentDocument;
+                myIframeDocument.querySelectorAll("html")[0].innerHTML = HTML2;
+                myIframeDocument.head.innerHTML = a2;
+                let styles = document.createElement("style");
+                let styles1 = document.createTextNode(CSS2);
+                styles.appendChild(styles1);
+                myIframeDocument.head.appendChild(styles);
+                let scripts = document.createElement("SCRIPT");
+                let scripts1 = document.createTextNode("try{" + JS2 + '}catch(error){localStorage.setItem("error",error);}');
+                scripts.appendChild(scripts1);
+                myIframeDocument.body.appendChild(scripts);
+            }
+            preserve.onclick = () => {
+                aoduo.load();;
+                aoduo.play();
+                setTimeout(runcodes, 200);
+            }
+            HTML.onclick = () => {
+                aoduo.load();;
+                aoduo.play()
+                HTML1();
+            }
+            JS.onclick = () => {
+                aoduo.load();;
+                aoduo.play()
+                JS1();
+            }
+            CSS.onclick = () => {
+                aoduo.load();;
+                aoduo.play()
+                CSS1();
+            }
+            lange.onclick = () => {
+                aoduo.load();;
+                aoduo.play()
+                language();
+                language_code_logo();
+
+            }
+        }
+        function red1() {
+            aside.style.background = "rgb(255 160 160)";
+            document.body.style.background = "rgb(255 211 211)";
+            nav.style.background = "rgb(255 211 211)";
+            header.style.background = "rgb(255 160 160)";
+            sessionStorage.setItem("color", "red");
+        }
+        function green1() {
+            aside.style.background = "rgb(134 255 134)";
+            document.body.style.background = "rgb(215 255 215)";
+            nav.style.background = "rgb(215 255 215)";
+            header.style.background = "rgb(134 255 134)";
+            sessionStorage.setItem("color", "green");
+        }
+        function orange1() {
+            aside.style.background = "rgb(255 218 151)";
+            document.body.style.background = "rgb(255 237 204)";
+            nav.style.background = "rgb(255 237 204)";
+            header.style.background = "rgb(255 218 151)";
+            sessionStorage.setItem("color", "orange");
+        }
+        function blue1() {
+            aside.style.background = "rgb(159 159 255)";
+            document.body.style.background = "rgb(209 209 255)";
+            nav.style.background = "rgb(209 209 255)";
+            header.style.background = "rgb(159 159 255)";
+            sessionStorage.setItem("color", "blue");
+        }
+        function aqua1() {
+            aside.style.background = "rgb(129 255 255)";
+            document.body.style.background = "rgb(214 255 255)";
+            nav.style.background = "rgb(214 255 255)";
+            header.style.background = "rgb(129 255 255)";
+            sessionStorage.setItem("color", "aqua");
+        }
+        function yellow1() {
+            aside.style.background = "rgb(255 255 140)";
+            document.body.style.background = "rgb(255 255 201)";
+            nav.style.background = "rgb(255 255 201)";
+            header.style.background = "rgb(255 255 140)";
+            sessionStorage.setItem("color", "yellow");
+        }
+        function white1() {
+            aside.style.background = "#cfcfcf";
+            document.body.style.background = "rgb(241 241 241)";
+            nav.style.background = "rgb(241 241 241)";
+            header.style.background = "#cfcfcf";
+            sessionStorage.setItem("color", "white");
+
+        }
+        function audios2(area) {
+            aoduo.setAttribute("src", "audio/" + area + ".wav");
+            sessionStorage.setItem("audio", area);
+        }
+        function F_setting_logo() {
+            sessionStorage.setItem("F_set", "F_setting_logo");
+            article.innerHTML = `
+    <div class="color_this_wib1">
+    <div id="color_this_wib1">لون الموقع</div>
+    <div class="color_this_wib" id="red"></div>
+    <div class="color_this_wib" id="orange"></div>
+    <div class="color_this_wib" id="blue"></div>
+    <div class="color_this_wib" id="yellow"></div>
+    <div class="color_this_wib" id="green"></div>
+    <div class="color_this_wib" id="aqua"></div>
+    <div class="color_this_wib" id="white"></div>
+    </div>
+    <div class="color_this_wib1">
+    <div id="color_this_wib2">الصوت عند النقر</div>
+    <select id="audios" placeholder="">
+    </select>
+    </div>
+    <div class="color_this_wib1">
+    <div id="color_this_wib3">حذف البيانات</div>
+    <div id="delete_all_data">حذف البيانات من ذاكرة التخزين المحلية</div>
+    <div id="deletee">حذف البيانات من الذاكرة التخزين المؤقتة</div>
+    <div></div>
+    </div>
+    `;
+            let delete_all_data = document.getElementById("delete_all_data");
+            let deletee = document.getElementById("deletee");
+            let audios1 = ["a-click", "b-click", "c-click", "d-click", "f-click", "g-click", "h-click", "i-click", "j-click", "k-click", "l-click", "m-click", "n-click", "o-click"];
+            let audios = document.getElementById("audios");
+            let white = document.getElementById("white");
+            let aqua = document.getElementById("aqua");
+            let yellow = document.getElementById("yellow");
+            let green = document.getElementById("green");
+            let blue = document.getElementById("blue");
+            let orange = document.getElementById("orange");
+            let red = document.getElementById("red");
+            let color_this_wib1 = document.getElementById("color_this_wib1");
+            let color_this_wib = document.getElementsByClassName("color_this_wib");
+            let color_this_wib2 = document.getElementById("color_this_wib2");
+            let color_this_wib3 = document.getElementById("color_this_wib3");
+            let message;
+            let message2;
+            language_setting_logo();
+            function audios2(area) {
+                aoduo.setAttribute("src", "audio/" + area + ".wav");
+                aoduo.play();
+                sessionStorage.setItem("audio", area);
+            }
+            function language_setting_logo() {
+                if (langes == "English") {
+                    color_this_wib1.style.direction = "ltr";
+                    color_this_wib2.style.direction = "ltr";
+                    color_this_wib2.innerHTML = "audio on click";
+                    color_this_wib3.style.direction = "ltr";
+                    color_this_wib3.innerHTML = "delete data";
+                    color_this_wib1.innerHTML = "wibsite background color";
+                    for (let b = 0; b < color_this_wib.length; b++) {
+                        color_this_wib[b].style.float = "left";
+                    }
+                    audios.style.float = "left";
+                    audios.style.direction = "ltr";
+                    audios.style.textAlign = "left";
+                    message = "";
+                    message2 = "";
+                }
+                else if (langes == "عربي") {
+                    color_this_wib1.style.direction = "rtl";
+                    color_this_wib2.style.direction = "rtl";
+                    color_this_wib3.innerHTML = "حذف البيانات";
+                    color_this_wib3.style.direction = "rtl";
+                    color_this_wib2.innerHTML = "الصوت عند النقر";
+                    color_this_wib1.innerHTML = "لون خلفية موقع الويب";
+                    for (let b = 0; b < color_this_wib.length; b++) {
+                        color_this_wib[b].style.float = "right";
+                    }
+                    audios.style.float = "right";
+                    audios.style.direction = "rtl";
+                    audios.style.textAlign = "right";
+                    message = `هل انت متأكد من حذف البيانات من ذاكرة التخزين المؤقتة سيؤدي ذلك الى اعادة الموقع الى الوضع الأفتراضي دون التأثير على أكودك`;
+                    message2 = `هل انت متأكد من حذف البيانات من ذاكرة التخزين المحلية سيؤدي ذلك الى حذف جميع البيانات بما في ذلك الأكود الموجود في محرر الأكود`;
+                }
+            }
+            audios.onchange = () => {
+                audios2(audios.value);
+
+            }
+            function array() {
+                for (let i = 0; i < audios1.length; i++) {
+                    audios.innerHTML += `<option class="option" value="${audios1[i]}">${audios1[i]}</option>`;
+                }
+            }
+            array();
+            audios.setAttribute("placeholder", sessionStorage.getItem("audio"));
+            delete_all_data.onclick = () => {
+                document.getElementById("audio_error").play();
+                setTimeout(function aaaaa() {
+                    let message1 = window.confirm(message2);
+                    if (message1 == true) {
+                        sessionStorage.clear();
+                        localStorage.clear();
+                        location.reload();
+                    }
+                }, 100)
+            }
+            deletee.onclick = () => {
+                document.getElementById("audio_error").play();
+                setTimeout(function aaaaa() {
+                    let message1 = window.confirm(message);
+                    if (message1 == true) {
+                        sessionStorage.clear();
+                        location.reload();
+                    }
+                }, 100)
+            }
+            red.onclick = () => {
+                aoduo.load();
+                aoduo.play();
+                red1();
+            }
+            green.onclick = () => {
+                aoduo.load();;
+                aoduo.play();
+                green1();
+            }
+            orange.onclick = () => {
+                aoduo.load();
+                aoduo.play();
+                orange1();
+            }
+            blue.onclick = () => {
+                aoduo.load();;
+                aoduo.play();
+                blue1();
+            }
+            aqua.onclick = () => {
+                aoduo.load();;
+                aoduo.play();
+                aqua1();
+            }
+            yellow.onclick = () => {
+                aoduo.load();;
+                aoduo.play();
+                yellow1();
+            }
+            white.onclick = () => {
+                aoduo.load();;
+                aoduo.play();
+                white1();
+            }
+            lange.onclick = () => {
+                aoduo.load();;
+                aoduo.play();
+                language();
+                language_setting_logo();
+            }
+        }
+        function rumove() {
+            if (sessionStorage.getItem("F_set") == "F_code_logo") {
+                F_code_logo();
+            } else if (sessionStorage.getItem("F_set") == "F_video_logo") {
+                F_video_logo();
+            } else if (sessionStorage.getItem("F_set") == "F_logo_refes") {
+                F_logo_refes();
+            } else if (sessionStorage.getItem("F_set") == "F_setting_logo") {
+                F_setting_logo();
+            }
+        }
+    </script>
+</body>
+
+</html>
